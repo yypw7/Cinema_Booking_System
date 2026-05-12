@@ -1,0 +1,21 @@
+#ifndef SHOWTIME_H
+#define SHOWTIME_H
+
+#include <iostream>
+using namespace std;
+
+class Movie;
+
+class ShowTime {
+private:
+    int ShowTimeId;
+    string Time;
+    Movie* movie;
+
+public:
+    ShowTime(int id, string t, Movie* m);
+    void displayShowTime();
+    string getTime();
+};
+
+#endif

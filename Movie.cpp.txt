@@ -1,0 +1,29 @@
+#include "Movie.h"
+#include "ShowTime.h"
+
+Movie::Movie(string t, int d, string g) {
+    Title = t;
+    Duration = d;
+    Genre = g;
+}
+
+void Movie::addShowTime(ShowTime* st) {
+    ShowTimes.push_back(st);
+}
+
+void Movie::displayMovie() {
+    cout << "Movie Title: " << Title << endl;
+    cout << "Duration: " << Duration << endl;
+    cout << "Genre: " << Genre << endl;
+}
+
+void Movie::displayShowTimes() {
+    for (ShowTime* st : ShowTimes) {
+        st->displayShowTime();
+        cout << endl;
+    }
+}
+
+string Movie::getTitle() {
+    return Title;
+}

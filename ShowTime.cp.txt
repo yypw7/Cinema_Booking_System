@@ -1,0 +1,18 @@
+#include "ShowTime.h"
+#include "Movie.h"
+
+ShowTime::ShowTime(int id, string t, Movie* m) {
+    ShowTimeId = id;
+    Time = t;
+    movie = m;
+}
+
+void ShowTime::displayShowTime() {
+    cout << "ShowTime ID: " << ShowTimeId << endl;
+    cout << "Time: " << Time << endl;
+    cout << "Movie: " << movie->getTitle() << endl;
+}
+
+string ShowTime::getTime() {
+    return Time;
+}
